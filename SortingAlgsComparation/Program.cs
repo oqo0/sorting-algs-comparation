@@ -8,7 +8,7 @@ namespace SortingAlgsComparation
         {
             ElementsList elements = new ElementsList(30);
             
-            DumbSort.Call(elements);
+            InsertionSort.Call(elements);
             
             Console.ReadLine();
         }
