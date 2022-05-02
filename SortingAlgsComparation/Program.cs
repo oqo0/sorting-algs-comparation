@@ -8,7 +8,7 @@ namespace SortingAlgsComparation
         {
             ElementsList elements = new ElementsList(30);
             
-            BubbleSort.Call(elements);
+            DumbSort.Call(elements);
             
             Console.ReadLine();
         }

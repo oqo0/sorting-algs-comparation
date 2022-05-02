@@ -1,5 +1,3 @@
-using System.Drawing;
-
 namespace SortingAlgsComparation;
 
 public class ElementsList

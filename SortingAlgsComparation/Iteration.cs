@@ -7,24 +7,37 @@ public static class Iteration
     /// <summary>
     /// Call this method every time the Iteration in your alg happens
     /// </summary>
-    /// <param name="elements">Elements with a list to sort</param>
-    public static void Invoke(ElementsList elements, int selectedOne)
+    /// <param name="elements">Elements algorithms is working with</param>
+    /// <param name="selectedElements">Selected elements to highlight on output</param>
+    public static void Invoke(ElementsList elements, params int[] selectedElements)
     {
-        // color the selected line
-        elements.List[selectedOne].StringColor = Color.White;
-        Console.Clear();
-        elements.PrintElements();
-        Thread.Sleep(20);
-    }
-    /// <summary>
-    /// Call this method every time the Iteration in your alg happens
-    /// </summary>
-    /// <param name="elements">Elements with a list to sort</param>
-    public static void Invoke(ElementsList elements, int selectedOne, int selectedTwo)
-    {
+        if (elements.List == null) return;
+        
         // color the selected lines
-        elements.List[selectedOne].StringColor = Color.White;
-        elements.List[selectedTwo].StringColor = Color.Yellow;
+        for (int i = 0; i < selectedElements.Length; i++)
+        {
+            Color selectedColor = Color.White;
+            int selectedIndex = selectedElements[i];
+
+            switch (i)
+            {
+                case 1:
+                    elements.List[selectedIndex].StringColor = Color.White;
+                    break;
+                case 2:
+                    elements.List[selectedIndex].StringColor = Color.Coral;
+                    break;
+                case 3:
+                    elements.List[selectedIndex].StringColor = Color.Gold;
+                    break;
+                case 4:
+                    elements.List[selectedIndex].StringColor = Color.Red;
+                    break;
+                default:
+                    elements.List[selectedIndex].StringColor = Color.Chartreuse;
+                    break;
+            }
+        }
         
         Console.Clear();
         elements.PrintElements();

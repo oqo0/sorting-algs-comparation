@@ -17,7 +17,7 @@ public static class DumbSort
                 if (list[i].Value > list[maxIndex].Value)
                     maxIndex = i;
                 
-                Iteration.Invoke(elements, i);
+                Iteration.Invoke(elements, i, list.Count - k - 1);
             }
 
             (list[^(k + 1)], list[maxIndex]) = (list[maxIndex], list[^(k + 1)]);
