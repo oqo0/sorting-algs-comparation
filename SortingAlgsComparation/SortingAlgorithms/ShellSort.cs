@@ -29,7 +29,10 @@ public static class ShellSort
                         loopBack = true;
                 }
                 
-                /*Iteration.Invoke(elements, i, j, j + gap);*/
+                if (j + gap < list.Count)
+                {
+                    Iteration.Invoke(elements, i, j + gap);
+                }
             }
         }
     }

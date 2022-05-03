@@ -4,7 +4,7 @@ namespace SortingAlgsComparation;
 
 public static class Iteration
 {
-    private const int sleepTime = 20;
+    private const int sleepTime = 30;
     
     /// <summary>
     /// Call this method every time the Iteration in your alg happens
