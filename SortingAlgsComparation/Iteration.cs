@@ -4,6 +4,8 @@ namespace SortingAlgsComparation;
 
 public static class Iteration
 {
+    private const int sleepTime = 20;
+    
     /// <summary>
     /// Call this method every time the Iteration in your alg happens
     /// </summary>
@@ -41,6 +43,6 @@ public static class Iteration
         
         Console.Clear();
         elements.PrintElements();
-        Thread.Sleep(20);
+        Thread.Sleep(sleepTime);
     }
 }
