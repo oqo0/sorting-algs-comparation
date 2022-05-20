@@ -4,7 +4,8 @@ namespace SortingAlgsComparation;
 
 public static class Iteration
 {
-    private const int sleepTime = 30;
+    internal static int SleepTime = 20;
+    internal static int Count { get; private set; }
     
     /// <summary>
     /// Call this method every time the Iteration in your alg happens
@@ -18,7 +19,6 @@ public static class Iteration
         // color the selected lines
         for (int i = 0; i < selectedElements.Length; i++)
         {
-            Color selectedColor = Color.White;
             int selectedIndex = selectedElements[i];
 
             switch (i)
@@ -30,10 +30,10 @@ public static class Iteration
                     elements.List[selectedIndex].StringColor = Color.Coral;
                     break;
                 case 3:
-                    elements.List[selectedIndex].StringColor = Color.Gold;
+                    elements.List[selectedIndex].StringColor = Color.Red;
                     break;
                 case 4:
-                    elements.List[selectedIndex].StringColor = Color.Red;
+                    elements.List[selectedIndex].StringColor = Color.Gold;
                     break;
                 default:
                     elements.List[selectedIndex].StringColor = Color.Chartreuse;
@@ -41,8 +41,8 @@ public static class Iteration
             }
         }
         
-        Console.Clear();
         elements.PrintElements();
-        Thread.Sleep(sleepTime);
+        Thread.Sleep(SleepTime);
+        Count++;
     }
 }
